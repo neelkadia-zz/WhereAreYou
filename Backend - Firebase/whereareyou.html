@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Geolocation</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' /><style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+</body>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+ <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: '',
+      databaseURL: '',
+      storageBucket: ''
+    };
+    firebase.initializeApp(config)
+
+    // Get a reference to the database service
+    firebase.database().ref().on('value', function(snapshot) {
+    var finaldata = JSON.stringify(snapshot.val());
+    console.log(finaldata);
+
+    //Load Map
+    mapboxgl.accessToken = '';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8',
+         center: [72.570022, 23.008392],
+         zoom: 16.5,
+         interactive: true
+    });
+    
+    finaldata = finaldata.replace(/"/g, "'");
+    var ultrafinal = JSON.stringify(eval("(" + finaldata + ")"));
+    var obj = JSON.parse(ultrafinal);
+
+    map.on('style.load', function () {
+
+    map.addSource("markers", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [obj.geometry.coordinates[1], obj.geometry.coordinates[0]]
+                },
+                "properties": {
+                    "title": "Your name here",
+                    "marker-color" : "#405660",
+                    "marker-size": "large",
+                    "marker-symbol": "marker"
+                }
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "markers",
+        "type": "symbol",
+        "source": "markers",
+        "layout": {
+            "icon-image": "{marker-symbol}-15",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold, Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+});
+
+    });
+  </script>
+        
+</body>
+</html>
