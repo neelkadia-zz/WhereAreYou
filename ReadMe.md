@@ -1,21 +1,18 @@
 # Where are you?
-## Real time location tracker
 
-Fronted contains an Android app which will installed in User's phone.<br />
-Backend can be hosted anywhere, a single page JS provide you a Mapbox interface which tracks and locate that user in realtime. 
+### Automate tracking and sharing your location with your friends and family.
 
 ### Why I made this?
-
-``` {
-	"MOM to ME": {
-		"on Call": ["Where are you, Neel ?"]
-	},
-	"Friends to me": {
-		"on Whatsapp": ["Wassup, where are you bro?", "Where are you buddy?"],
-		"on Messenger": ["Hey, in city?", "Hey, Call me I'm in City, We can meet"],
-		"on Call": ["I'm at your Home, F*ck! where the hell are you?"]
-	}
-} ```
+{ <br />
+	 &ensp;&ensp;&ensp;&ensp;"MOM to ME": {<br />
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;		"on Call": ["Where are you, Neel ?"]<br />
+	&ensp;&ensp;&ensp;&ensp;},<br />
+	&ensp;&ensp;&ensp;&ensp;"Friends to me": {<br />
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"on Whatsapp": ["Wassup, where are you bro?", "Where are you buddy?"],<br />
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"on Messenger": ["Hey, in city?", "Hey, Call me I'm in City, We can meet"],<br />
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"on Call": ["I'm at your Home, F*ck! where the hell are you?"]<br />
+	&ensp;&ensp;&ensp;&ensp;}<br />
+} <br />
 
 People were keep asking me where are you Neel, every time while I was working on a Interesting GIF making or some in house project in college hostel. I have a thought to make something which always track your location and tell this people where are you and that thing must be autonomous, that won't require your focus at all. So I come up with this.
 
