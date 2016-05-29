@@ -4,15 +4,16 @@
 
 ### Why I made this?
 ```JSON
-{ 
-	 "MOM to ME": {
-		"on Call": ["Where are you, Neel ?"] },
+{
+	"MOM to ME": {
+		"on Call": ["Where are you, Neel ?"]
+	},
 	"Friends to me": {
 		"on Whatsapp": ["Wassup, where are you bro?", "Where are you buddy?"],
 		"on Messenger": ["Hey, in city?", "Hey, Call me I'm in City, We can meet"],
 		"on Call": ["I'm at your Home, F*ck! where the hell are you?"]
 	}
-} 
+}
 ```
 People were keep asking me where are you Neel, every time while I was working on a Interesting GIF making or some in house project in college hostel. I have a thought to make something which always track your location and tell this people where are you and that thing must be autonomous, that won't require your focus at all. So I come up with this.
 
