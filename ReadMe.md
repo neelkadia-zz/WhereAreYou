@@ -1,6 +1,7 @@
 # Where are you?
 
 ### Automate tracking and sharing your location with your friends and family.
+![Where are you?](https://raw.githubusercontent.com/neelkadia/WhereaAreYou/master/screenshot_1.png)
 
 ### Why I made this?
 ```JSON
