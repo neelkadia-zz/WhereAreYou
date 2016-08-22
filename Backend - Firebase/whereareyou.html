@@ -13,8 +13,9 @@
 </body>
 <div id='map' style='width: 400px; height: 300px;'></div>
 
- <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
-  <script>
+<script src="moment.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+<script>
     // Initialize Firebase
     var config = {
       apiKey: '',
@@ -41,7 +42,9 @@
     finaldata = finaldata.replace(/"/g, "'");
     var ultrafinal = JSON.stringify(eval("(" + finaldata + ")"));
     var obj = JSON.parse(ultrafinal);
+ 	var Time = obj.geometry.coordinates[2];
 
+    console.log("Last seen:"+moment(Time).fromNow());
     map.on('style.load', function () {
 
     map.addSource("markers", {
