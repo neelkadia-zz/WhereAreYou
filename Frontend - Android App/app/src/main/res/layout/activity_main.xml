@@ -14,7 +14,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start location sharing" />
+        android:text="@string/start_location_sharing" />
 
     <TextView
         android:id="@+id/txtCoordinates"
