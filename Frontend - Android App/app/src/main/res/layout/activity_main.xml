@@ -14,29 +14,23 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Start location sharing" />
+        android:text="@string/start_location_sharing" />
 
     <TextView
         android:id="@+id/txtCoordinates"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLocationSharing"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/txtAddress"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtCoordinates"
         android:layout_marginLeft="5dp"
-        android:gravity="center"
-        android:text="" />
+        android:gravity="center" />
 
 </LinearLayout>
 
