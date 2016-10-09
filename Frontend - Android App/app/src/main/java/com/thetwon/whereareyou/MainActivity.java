@@ -38,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
             public void onReceive(Context context, Intent intent) {
                 if(intent.getAction().equals(RECEIVE_JSON)) {
                     Provider = intent.getStringExtra("Provider");
-                    Latitude =(Double) intent.getExtras().get("Latitude");
-                    Longitude =(Double) intent.getExtras().get("Longitude");
-                    //Provider =(String) intent.getExtras().get("Provider");
+                    Latitude = (Double)intent.getExtras().get("Latitude");
+                    Longitude = (Double)intent.getExtras().get("Longitude");
                     txtAddress.setText("Provider : "+Provider);
                     txtCoordinates.setText("Lat:" + Latitude + " ,Long:" + Longitude);
 
