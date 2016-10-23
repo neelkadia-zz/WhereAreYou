@@ -16,7 +16,7 @@
 	}
 }
 ```
-People kept asking me "Where are you Neel?!" constantly while I was working on a Interesting GIF making or some in house project in college hostel. I have a thought to make something which always track your location and tell this people where are you and that thing must be autonomous, that won't require your focus at all. So I come up with this.
+People kept asking me "Where are you Neel?!" constantly while I was working on a interesting GIF or some in-house project in a college hostel. I had a thought to make something which always track your location and tell these people where you are. That thing must be autonomous, so it won't require your focus at all. So I came up with this.
 
 ### Stack
 * Font end is Android app which keep tracks your location and update it into private cloud of Firebase.<br />
