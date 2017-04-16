@@ -69,9 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(btnLocationSharing.getText().toString().equalsIgnoreCase("Start location sharing")){
-                    Intent intent = new Intent(MainActivity.this, LocationService.class);
-                    startService(intent);
-                    btnLocationSharing.setText("Stop location sharing");
+                    ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
                 }else{
                     btnLocationSharing.setText("Start location sharing");
                     android.os.Process.killProcess(android.os.Process.myPid());
@@ -102,6 +100,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent = new Intent(MainActivity.this, LocationService.class);
+                    startService(intent);
+                    btnLocationSharing.setText("Stop location sharing");
+
+                } else {
+                    Toast.makeText(getApplicationContext(),"Permission Denied",Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
 }
