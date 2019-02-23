@@ -41,3 +41,6 @@ Want to contribute? Great! Fork and send pull request.
 ### License
 
 MIT
+
+### Donate via PayPal
+[paypal.me/neelkadia](https://paypal.me/neelkadia)
